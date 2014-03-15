@@ -33,7 +33,7 @@
 #include "endianness.h"
 
 #ifdef WIN32
-#include <Synchapi.h>
+#include <WinBase.h>
 #endif
 
 /** The maximum size an AFC data packet can be */
