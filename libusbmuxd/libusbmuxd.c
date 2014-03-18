@@ -1006,7 +1006,7 @@ int usbmuxd_send(int sfd, const char *data, uint32_t len, uint32_t *sent_bytes)
 	if (sfd < 0) {
 		return -EINVAL;
 	}
-	
+/*	
 #if DEBUG_DATA
 	if (len > 0) {
 		char *tmp = NULL;
@@ -1024,7 +1024,7 @@ int usbmuxd_send(int sfd, const char *data, uint32_t len, uint32_t *sent_bytes)
 	}
 
 #endif
-
+*/
 	num_sent = send(sfd, (const char *)(void*)data, len, 0);
 	if (num_sent < 0) {
 		*sent_bytes = 0;
@@ -1047,7 +1047,7 @@ int usbmuxd_recv_timeout(int sfd, char *data, uint32_t len, uint32_t *recv_bytes
 		*recv_bytes = 0;
 		return num_recv;
 	}
-
+/*
 #if DEBUG_DATA
 	if (len > 0) {
 		char *tmp = NULL;
@@ -1063,7 +1063,7 @@ int usbmuxd_recv_timeout(int sfd, char *data, uint32_t len, uint32_t *recv_bytes
 		free(tmp);
 	}
 #endif
-
+*/
 	*recv_bytes = num_recv;
 
 	return 0;

@@ -2,7 +2,7 @@
 
 #include <string.h>
 #include <assert.h>
-#include <fileapi.h>
+#include <WinBase.h>
 
 #include <stdio.h>
 

@@ -96,6 +96,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "idevicebackup", "libimobile
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "idevicebackup2", "libimobiledevice-tools\idevicebackup2\idevicebackup2.vcxproj", "{98E67352-7104-464C-8774-149B704660A1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "win-ios-install", "libimobiledevice-tools\win-ios-install\win-ios-install.vcxproj", "{EB9A700D-6D7E-49AF-A908-44E66BFC7D08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -326,6 +328,16 @@ Global
 		{98E67352-7104-464C-8774-149B704660A1}.Release|Mixed Platforms.Build.0 = Release|Win32
 		{98E67352-7104-464C-8774-149B704660A1}.Release|Win32.ActiveCfg = Release|Win32
 		{98E67352-7104-464C-8774-149B704660A1}.Release|Win32.Build.0 = Release|Win32
+		{EB9A700D-6D7E-49AF-A908-44E66BFC7D08}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{EB9A700D-6D7E-49AF-A908-44E66BFC7D08}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{EB9A700D-6D7E-49AF-A908-44E66BFC7D08}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{EB9A700D-6D7E-49AF-A908-44E66BFC7D08}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EB9A700D-6D7E-49AF-A908-44E66BFC7D08}.Debug|Win32.Build.0 = Debug|Win32
+		{EB9A700D-6D7E-49AF-A908-44E66BFC7D08}.Release|Any CPU.ActiveCfg = Release|Win32
+		{EB9A700D-6D7E-49AF-A908-44E66BFC7D08}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{EB9A700D-6D7E-49AF-A908-44E66BFC7D08}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{EB9A700D-6D7E-49AF-A908-44E66BFC7D08}.Release|Win32.ActiveCfg = Release|Win32
+		{EB9A700D-6D7E-49AF-A908-44E66BFC7D08}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -343,5 +355,6 @@ Global
 		{B2F015FE-07F5-43AC-B6E6-DF8D0D4ADC66} = {054378B1-3FE2-4586-A94C-11424D95C913}
 		{F3837EA2-E283-4D52-8955-0BD75A8F6CFB} = {054378B1-3FE2-4586-A94C-11424D95C913}
 		{98E67352-7104-464C-8774-149B704660A1} = {054378B1-3FE2-4586-A94C-11424D95C913}
+		{EB9A700D-6D7E-49AF-A908-44E66BFC7D08} = {054378B1-3FE2-4586-A94C-11424D95C913}
 	EndGlobalSection
 EndGlobal
