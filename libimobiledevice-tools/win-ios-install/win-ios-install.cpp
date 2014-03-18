@@ -26,30 +26,21 @@ unsigned int fromhex(char c)
     return 0;
 }
 
-char *hex2strn(const char *data, const int len)
+char *hex2strn(const char *data, char *result, const int len)
 {
     if (len == 0) {
         return NULL;
     }
-    
+    memset(result, 0, sizeof(result));
+    int i, j;
     int result_len = len/2 + 1;
-
-    char *result = (char *)malloc((result_len + 1) * sizeof(char));
-
-    int i=0;
-    int j=0;
-    while(data[i] != '#' && i<len) {
+    for (i=0, j=0; data[i] != '#' && i < len; i+=2) {
         result[j++] = fromhex(data[i]) << 4 | fromhex(data[i+1]);
-        i+=2;
     }
     result[j] = 0x00;
     return result;
 }
 
-char *hex2str(const char *data)
-{
-    return hex2strn(data, strlen(data));
-}
 
 void send_str(char* buf, idevice_connection_t connection)
 {
@@ -68,9 +59,11 @@ void recv_pkt(idevice_connection_t connection)
         send_str("+", connection);
         if (bytes > 1 && buf[1] == 'O') {
             char* c = buf+2;
-            char *buf3 = hex2str(c);
-            if (strlen(buf3) > 10) {
-                printf("%s", buf3);
+            char* bufend = buf+strlen(buf);
+            char buf3[16*1024];
+            char *result = hex2strn(c, buf3, strlen(c));
+            if (strlen(result) > 10) {
+                printf("%s", result);
             }
             fflush(stderr);
             fflush(stdout);
