@@ -19,6 +19,8 @@
 *.[Cc]ache
 *.ilk
 *.log
+*.tlog
+vc110.pdb
 *.sbr
 *.sdf
 *.opensdf
